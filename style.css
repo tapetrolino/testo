@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Rajdhani:wght@500;600;700&display=swap');
+
+:root {
+    --primary-color: #0c0c0d;
+    --second-color: #c03cfe;
+    --third-color: #061720;
+    --fourth-color: #f7f7f7;
+
+    --primary-font: "Lato", sans-serif;
+    --second-font: "Rajdhani", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	font-weight: 400;
+	font-family: var(--primary-font);
+	color: var(--third-color);
+	background-color: #fff; 
+	overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p, li {
+    line-height: 1.2em;
+}
+
+strong {
+    font-weight: 700;
+}
+
+section {
+    padding: 30px 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--second-font);
+    font-weight: 700;
+    margin-bottom: .8em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+h1, h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: .5em;
+}
+
+.container {
+	position: relative;
+	max-width: 1200px;
+	width: 100%;
+	margin: auto;
+	padding: 0 30px;
+}
+
+.container &:before,
+.container &:after {
+    content: '';
+	display: table;
+	clear: both;
+}
+
+.btn {
+    padding: 16px 32px;
+    color: var(--fourth-color);
+    background-color: var(--third-color);
+    display: inline-block;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header {
+    background-color: var(--primary-color);
+    background-image: url("img/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header nav {
+    padding: 20px 0;
+}
+
+header nav ul {
+   display: flex;
+   justify-content: space-around;
+}
+
+header nav a {
+    color: var(--fourth-color);
+    text-transform: uppercase;
+}
+
+header .banner {
+    padding: 30px 0;
+}
+
+header .banner img {
+    max-width: 770px;
+    margin: 0 auto;
+    display: block;
+}
+
+.testosterona .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.testosterona .content .-text p {
+    letter-spacing: 1px;
+}
+
+.testosterona .content .-card {
+    background-color: #e6e6e6;
+    border-radius: 16px;
+    padding: 30px 40px;
+    text-align: center;
+    box-shadow: 10px 10px 35px rgba(192, 60, 254, 0.1);
+}
+
+.testosterona .content .-card p {
+    font-weight: 700;
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+.testosterona .content .-card p span {
+    color: #fa3bfe;
+    text-transform: uppercase;
+}
+
+.testosterona .content .-card .btn {
+    text-transform: uppercase;
+    color: var(--fourth-color);
+    border-radius: 6px;
+}
+
+.testosterona .content .-card p small {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.function {
+    background-color: var(--third-color);
+    background-image: url("img/function-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+.function h1 {
+    color: var(--fourth-color);
+    
+}
+.function h1 span {
+    font-weight: 600;
+    display: block;
+}
+
+.function .items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+.function .items li {
+    font-family: var(--second-font);
+    width: 33.3%
+}
+.function .items li .-icon {
+    position: relative;
+    margin: 10px 0;
+    height: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.function .items li .-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--fourth-color);
+    border-radius: 50%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.function .items li:nth-of-type(1) .-icon::before {
+    background: #4057fb;
+}
+.function .items li:nth-of-type(2) .-icon::before {
+    background: #f747fa;
+}
+.function .items li:nth-of-type(3) .-icon::before {
+    background: #be46f9;
+}
+.function .items li:nth-of-type(4) .-icon::before {
+    background: #fb6e85;
+}
+.function .items li:nth-of-type(5) .-icon::before {
+    background: #edad88;
+}
+.function .items li:nth-of-type(6) .-icon::before {
+    background: #e3db80;
+}
+
+.function .items li .-icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--fourth-color);
+}
+
+/* start items li hover */
+.function .items li:hover .-icon{
+    transform: scale(1.4);
+}
+
+.function .items li:hover .-icon::before {
+    background-color: var(--fourth-color);
+}
+
+.function .items li:nth-of-type(1):hover .-icon::after {
+    border: 1px solid #4057fb;
+}
+.function .items li:nth-of-type(2):hover .-icon::after {
+    border: 1px solid #f747fa;
+}
+.function .items li:nth-of-type(3):hover .-icon::after {
+    border: 1px solid #be46f9;
+}
+.function .items li:nth-of-type(4):hover .-icon::after {
+    border: 1px solid #fb6e85;
+}
+.function .items li:nth-of-type(5):hover .-icon::after {
+    border: 1px solid #edad88;
+}
+.function .items li:nth-of-type(6):hover .-icon::after {
+    border: 1px solid #e3db80;
+}
+/* end items li hover */
+
+.function .items li span {
+    color: var(--fourth-color);
+}
+
+.commission {
+    background-color: var(--fourth-color);
+}
+
+.commission .items {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.commission .items .-item img {
+    max-width: 300px;
+    margin-bottom: 15px;
+    border-radius: 16px;
+    box-shadow: 10px 10px 35px rgba(192, 60, 254, 0.1);
+}
+.commission .items .-item h4 {
+    text-align: left;
+    color: var(--second-color);
+    text-transform: uppercase;
+}
+
+.commission .items .-item p {
+    letter-spacing: 1px;
+}
+
+.public {
+    background-color: var(--third-color);
+    background-image: url("img/public-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+.public h2 {
+    color: var(--fourth-color);
+}
+.public ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.public ul li {
+    position: relative;
+    background-color: var(--fourth-color);
+    font-size: 22px;
+    font-family: var(--second-font);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--primary-color);
+    border-radius: 16px;
+    padding: 40px 0;
+    width: 280px;
+    max-width: 280px;
+    transition: all .5s ease-in-out;
+    box-shadow: 0 0 10px rgba(250, 59, 254, 0.8);
+}
+.public ul li:hover {
+    color: var(--fourth-color);
+    background-color: var(--primary-color);
+}
+
+.cards {
+    padding: 40px 0;
+    background-color: var(--fourth-color);
+}
+.cards .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cards .card {
+    border-radius: 16px;
+    text-align: center;
+    padding: 40px 20px;
+    border: 2px solid var(--primary-color);
+}
+.cards .card h3 {
+    color: var(--primary-color);
+    margin-bottom: .2em;
+}
+.cards .card p {
+    color: var(--second-color);
+    margin-bottom: 2em;
+}
+.cards .card .btn {
+    padding: 12px 40px;
+}
+
+.cards .card.-reverse {
+    background-color: var(--primary-color);
+    border-color: var(--second-color);
+}
+.cards .card.-reverse h3 {
+    color: var(--fourth-color);
+}
+.cards .card.-reverse .btn {
+    background-color: var(--fourth-color);
+    color: var(--primary-color);
+}
+
+.location {
+    background-color: var(--fourth-color);
+}
+.location .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+.location .card {
+    position: relative;
+    border-radius: 16px;
+    border: 2px solid #3f50ff;
+    background: linear-gradient(to top, var(--primary-color), #0e3347);
+}
+.location .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 78px;
+    height: 120px;
+    background-image: url("img/location-icon.png");
+}
+.location .card .-img {
+    padding: 25px;
+    border-bottom: 2px solid #3f50ff;
+}
+.location .card .-img img {
+    border-radius: 16px;
+}
+.location .card .-text {
+    padding: 25px 20px;
+    color: var(--fourth-color);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background: linear-gradient(to top, var(--primary-color), #0e3347);
+}
+.location .card .-text h4 {
+    text-align: left;
+}
+.location .card .-text p {
+    letter-spacing: 1px;
+}
+
+footer {
+    padding: 60px 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: var(--fourth-color);
+}
+
+footer img {
+    max-width: 86px;
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 425px) {
+    .function .items li {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    h1, h2 {
+        font-size: 34px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    h4 {
+        font-size: 24px;
+    }
+
+    .testosterona .content {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .testosterona .content .-text {
+        width: 50%;
+    }
+    .testosterona .content .-text p {
+        font-size: 18px;
+    }
+    .testosterona .content .-card p {
+        font-size: 24px;
+    }
+    .testosterona .content .-card .btn {
+       font-size: 18px;
+    }
+    .testosterona .content .-card p small {
+        font-size: 16px;
+    }
+
+    .function .items li {
+        width: inherit;
+    }
+
+    .commission .items {
+        flex-direction: row;
+    }
+
+    .public ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .public ul li {
+        flex: 0 0 30%;
+    }
+
+    .cards .content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .cards .card {
+        width: 50%;
+    }
+    .cards .card p {
+        font-size: 18px;
+    }
+
+    .location .content {
+        flex-direction: row;
+    }
+    .location .map {
+        width: 60%;
+    }
+    .location .card {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    h1, h2 {
+        font-size: 44px;
+    }
+    h3 {
+        font-size: 38px;
+    }
+    h4 {
+        font-size: 28px;
+    }
+
+    .testosterona .content .-text {
+        width: 62%;
+    }
+    .testosterona .content .-text p {
+        font-size: 22px;
+    }
+    .testosterona .content .-card {
+        padding: 40px 50px;
+    }
+    .testosterona .content .-card p {
+        font-size: 28px;
+    }
+    .testosterona .content .-card .btn {
+        font-size: 22px;
+    }
+    .testosterona .content .-card p small {
+        font-size: 18px;
+    }
+
+    .commission .items .-item p {
+        font-size: 20px;
+    }
+
+    .public ul li {
+        background-image: url("img/molecula.png");
+    }
+    .public ul li:nth-of-type(1) {
+        background-position-x: 0;
+        background-position-y: 292px;
+    }
+    .public ul li:nth-of-type(2) {
+        background-position-x: 122px;
+        background-position-y: 292px;
+    }
+    .public ul li:nth-of-type(3) {
+        background-position-x: 242px;
+        background-position-y: 292px;
+    }
+    .public ul li:nth-of-type(4) {
+        background-position-x: 0;
+        background-position-y: 168px;
+    }
+    .public ul li:nth-of-type(5) {
+        background-position-x: 122px;
+        background-position-y: 168px;
+    }
+    .public ul li:nth-of-type(6) {
+        background-position-x: -168px;
+        background-position-y: 168px;
+    }
+    .public ul li:nth-of-type(7) {
+        background-position-x: -138px;
+        background-position-y: 48px;
+    }
+    .public ul li:nth-of-type(8) {
+        background-position-x: -16px;
+        background-position-y: 46px;
+    }
+
+    .cards .card p {
+        font-size: 24px;
+    }
+}
